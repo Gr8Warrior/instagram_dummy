@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,11 +142,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Instagram" id="p4W-Nd-6kO">
-                        <barButtonItem key="leftBarButtonItem" title="Post" id="mtb-A5-Eyz">
-                            <connections>
-                                <segue destination="Nq7-61-hSM" kind="show" id="APs-Lj-DaE"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Post" id="mtb-A5-Eyz">
+                                <connections>
+                                    <segue destination="Nq7-61-hSM" kind="show" id="APs-Lj-DaE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Feeds" id="Mn3-dG-LJN">
+                                <connections>
+                                    <segue destination="YQZ-bK-uWQ" kind="show" id="P88-zx-u9D"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="rfg-jq-y6m">
                             <connections>
                                 <action selector="logout:" destination="DgF-uL-sjP" id="7cb-i9-v4X"/>
@@ -158,7 +166,72 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdE-si-lSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229" y="108"/>
+            <point key="canvasLocation" x="1084" y="107"/>
+        </scene>
+        <!--Your Feeds-->
+        <scene sceneID="Mes-4g-y7B">
+            <objects>
+                <tableViewController title="Your Feeds" id="YQZ-bK-uWQ" customClass="FeedsTableViewController" customModule="instagram_sample_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="301" sectionHeaderHeight="28" sectionFooterHeight="28" id="vdS-O5-dr4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="301" id="ffU-ak-SFv" customClass="FeedTableViewCell" customModule="instagram_sample_Swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="301"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffU-ak-SFv" id="LXS-Ud-7AG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbi-Wr-FPc">
+                                            <rect key="frame" x="8" y="23" width="359" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="MhP-0P-h5T"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAG-A9-v3Y">
+                                            <rect key="frame" x="8" y="231" width="359" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBu-eg-XhJ">
+                                            <rect key="frame" x="8" y="263" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Mbi-Wr-FPc" firstAttribute="top" secondItem="LXS-Ud-7AG" secondAttribute="topMargin" constant="15" id="2aw-Mt-ibQ"/>
+                                        <constraint firstItem="yBu-eg-XhJ" firstAttribute="top" secondItem="KAG-A9-v3Y" secondAttribute="bottom" constant="8" id="59Z-Rb-zrV"/>
+                                        <constraint firstItem="KAG-A9-v3Y" firstAttribute="trailing" secondItem="LXS-Ud-7AG" secondAttribute="trailingMargin" id="6YS-Of-ihE"/>
+                                        <constraint firstItem="KAG-A9-v3Y" firstAttribute="leading" secondItem="LXS-Ud-7AG" secondAttribute="leadingMargin" id="NU6-dz-ooJ"/>
+                                        <constraint firstItem="yBu-eg-XhJ" firstAttribute="trailing" secondItem="LXS-Ud-7AG" secondAttribute="trailingMargin" id="Slc-s0-zGX"/>
+                                        <constraint firstItem="Mbi-Wr-FPc" firstAttribute="leading" secondItem="LXS-Ud-7AG" secondAttribute="leadingMargin" id="V5M-D9-BCZ"/>
+                                        <constraint firstItem="yBu-eg-XhJ" firstAttribute="leading" secondItem="LXS-Ud-7AG" secondAttribute="leadingMargin" id="VtZ-4m-aEx"/>
+                                        <constraint firstItem="Mbi-Wr-FPc" firstAttribute="centerX" secondItem="LXS-Ud-7AG" secondAttribute="centerX" id="eic-st-WzM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Mbi-Wr-FPc" secondAttribute="trailing" id="lC9-wX-plQ"/>
+                                        <constraint firstItem="KAG-A9-v3Y" firstAttribute="top" secondItem="Mbi-Wr-FPc" secondAttribute="bottom" constant="8" id="ylR-sr-826"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageLabel" destination="yBu-eg-XhJ" id="EMH-BE-tFD"/>
+                                    <outlet property="postedImage" destination="Mbi-Wr-FPc" id="7NG-d2-V6E"/>
+                                    <outlet property="userNameLabel" destination="KAG-A9-v3Y" id="5Db-8g-XwP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YQZ-bK-uWQ" id="Twj-yf-IKG"/>
+                            <outlet property="delegate" destination="YQZ-bK-uWQ" id="1Lm-ad-5bk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vru-8Q-LfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8" y="-643.62818590704649"/>
         </scene>
         <!--Post-->
         <scene sceneID="sbL-Qz-yk4">

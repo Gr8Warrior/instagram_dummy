@@ -20,6 +20,8 @@
 		B12CD0581E41EA9200A952DD /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CD0571E41EA9200A952DD /* UserTableViewController.swift */; };
 		B12CD05A1E4324FD00A952DD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CD0591E4324FD00A952DD /* PostViewController.swift */; };
 		B12CD05C1E4325B900A952DD /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = B12CD05B1E4325B900A952DD /* person.png */; };
+		B12CD05E1E43379400A952DD /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CD05D1E43379400A952DD /* FeedsTableViewController.swift */; };
+		B12CD0601E433C1900A952DD /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CD05F1E433C1900A952DD /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		B12CD0571E41EA9200A952DD /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		B12CD0591E4324FD00A952DD /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B12CD05B1E4325B900A952DD /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		B12CD05D1E43379400A952DD /* FeedsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTableViewController.swift; sourceTree = "<group>"; };
+		B12CD05F1E433C1900A952DD /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
+				B12CD05F1E433C1900A952DD /* FeedTableViewCell.swift */,
 				81BA81471A49DA1800E65899 /* instagram_sample-Swift */,
 				814C3AC51B69877600E307BB /* Resources */,
 				81BA816A1A49DB5600E65899 /* Frameworks */,
@@ -92,6 +97,7 @@
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				B12CD05D1E43379400A952DD /* FeedsTableViewController.swift */,
 				B12CD0591E4324FD00A952DD /* PostViewController.swift */,
 				B12CD0571E41EA9200A952DD /* UserTableViewController.swift */,
 				B12CD05B1E4325B900A952DD /* person.png */,
@@ -196,6 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B12CD05A1E4324FD00A952DD /* PostViewController.swift in Sources */,
+				B12CD0601E433C1900A952DD /* FeedTableViewCell.swift in Sources */,
+				B12CD05E1E43379400A952DD /* FeedsTableViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				B12CD0581E41EA9200A952DD /* UserTableViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
