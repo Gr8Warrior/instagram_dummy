@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ParseMutableClientConfiguration.applicationId = "YOUR_APP_ID"
             ParseMutableClientConfiguration.clientKey = "YOU_CLIENT_KEY"
             ParseMutableClientConfiguration.server = "YOUR_SERVER_ADDRESS"
+
         })
         
         Parse.initialize(with: parseConfiguration)
